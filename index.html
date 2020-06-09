@@ -218,7 +218,7 @@
                     .duration(100)
                     .style("opacity", 1);
 
-                var htmlText =  "<b>" + d.data.Country + "</b><br/>&nbsp;Escenario sin recaída: <b>" + Math.round(d.data.scenario1 * 10) / 10 + "%</b> (cambio en comparación con el período anterior)<br>&nbsp;Escenario de recaída :<b>" + Math.round(d.data.scenario2 * 10) / 10 + "%</b>  (cambio en comparación con el período anterior)"
+                var htmlText =  "<b>" + d.data.Country + "</b><br/>&nbsp;Escenario de un solo brote: <b>" + Math.round(d.data.scenario1 * 10) / 10 + "%</b> (cambio en comparación con el período anterior)<br>&nbsp;Escenario con segundo brote:<b>" + Math.round(d.data.scenario2 * 10) / 10 + "%</b>  (cambio en comparación con el período anterior)"
 
                 if (event.pageX < width - 75) {
                     divMap.html(htmlText)
@@ -254,9 +254,9 @@
             .attr("dy", "0.32em")
             .text(function (d) { 
                 if (d=="scenario1")
-                    return "Escenario sin recaída";
+                    return "Escenario de un solo brote";
                 else
-                    return "Descenso adicional en el escenario de recaída"});
+                    return "Impacto adicional en el escenario de un segundo brote"});
     }
 
         d3.select("#Share").on("click", function () {
