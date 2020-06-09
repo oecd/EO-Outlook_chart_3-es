@@ -322,5 +322,5 @@
                 document.getElementById("shareLink").style.display = 'none';
             })
 
-    $(window).on('resize', drawChart);
+    $(window).on('resize', function () { drawChart(valueButton); });
     </script>
